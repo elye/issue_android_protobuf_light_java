@@ -1,0 +1,35 @@
+syntax = "proto3";
+package mobile.searchresults;
+
+option java_package = "com.elyeproj.proto";
+option java_multiple_files = true;
+
+
+message Result {
+    repeated Card cards = 1;
+}
+
+message Card {
+    oneof card {
+        Diamond diamond = 1;
+        Club club = 2;
+        Heart heart = 3;
+        Spade spade = 4;
+    }
+}
+
+message Diamond {
+    string listing_id = 1;
+}
+
+message Club {
+
+}
+
+message Heart {
+
+}
+
+message Spade {
+
+}
